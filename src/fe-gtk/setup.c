@@ -171,6 +171,7 @@ static const setting appearance_settings[] =
         {ST_TOGGLE, N_("Colored nick names"), P_OFFINTNL(hex_text_color_nicks), N_("Give each person on IRC a different color"),0,0},
         {ST_TOGGLR, N_("Indent nick names"), P_OFFINTNL(hex_text_indent), N_("Make nick names right-justified"),0,0},
         {ST_TOGGLE, N_ ("Show marker line"), P_OFFINTNL (hex_text_show_marker), N_ ("Insert a red line after the last read text."), 0, 0},
+        {ST_TOGGLE, N_("Keep search position when closing"), P_OFFINTNL(hex_text_search_keep_position), 0, 0, 0},
 
         {ST_HEADER,     N_("Timestamps"),0,0,0},
         {ST_TOGGLE, N_("Enable timestamps"), P_OFFINTNL(hex_stamp_text),0,0,1},
@@ -219,7 +220,7 @@ static const setting inputbox_settings[] =
         {ST_TOGGLE, N_("Spell checking"), P_OFFINTNL(hex_gui_input_spell),0,0,1},
         {ST_ENTRY,      N_("Dictionaries to use:"), P_OFFSETNL(hex_text_spell_langs),0,0,sizeof prefs.hex_text_spell_langs},
 #ifdef WIN32
-        {ST_LABEL,      N_("Use language codes (as in \"%LOCALAPPDATA%\\enchant\\myspell\\dicts\").\nSeparate multiple entries with commas.")},
+        {ST_LABEL,      N_("Use language codes (for example, \"en_US\").\nOn Windows 8 and newer, dictionaries are provided by Windows. Separate multiple entries with commas.")},
 #else
         {ST_LABEL,      N_("Use language codes. Separate multiple entries with commas.")},
 #endif
